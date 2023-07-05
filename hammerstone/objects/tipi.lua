@@ -1,5 +1,4 @@
 return {
-	debug = true,
 	description = {
 		identifier = "tipi"
 	},
