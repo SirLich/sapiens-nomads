@@ -1,3 +1,5 @@
+local craftAreaGroup = mjrequire "common/craftAreaGroup"
+
 return {
 	description = {
 		identifier = "drying_rack"
@@ -8,8 +10,12 @@ return {
 			props = {
 				preventGrassAndSnow = true,
 				isPathFindingCollider = true,
-				blocksRain = true,
+				craftAreaGroupTypeIndex = craftAreaGroup.types.drying_rack.index,
+				isCraftArea = true,
 			}
+		},
+		hs_plans = {
+			available_plans = "availablePlansForCraftArea"
 		},
 		hs_buildable = {
 			skill = "basicBuilding",
@@ -29,12 +35,12 @@ return {
 				},
 				{
 					key = "branch_2",
-					default_model = "tipi_branch2",
+					default_model = "birchBranch",
 					resource = "branch",
 				},
 				{
 					key = "branch_3",
-					default_model = "tipi_branch3",
+					default_model = "birchBranch", -- TODO: This one should use the 'long' remap variant. It's kinda a PITA to set up though, so we could also export and hard-code for a crossbar.
 					resource = "branch",
 					additional_index_count = 1, -- Automatically fill in the rack_string resource
 				},
