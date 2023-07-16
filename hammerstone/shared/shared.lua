@@ -1,4 +1,7 @@
 return {
+	hs_object_sets = {
+		"bisons"
+	},
 	hs_materials = {
 		{
 			identifier = "tipi",
