@@ -19,9 +19,15 @@ return {
 				},
 			}
 		},
+		hs_plans = {
+			hunting_preset = "spearHuntingInto"
+		},
 		hs_mob = {
 			dead_object = "deadMammoth", -- TODO
 			animation_group = "bison",
+			emulate_client_ai = true,
+			emulate_server_ai = true,
+
 			props = {
 				initialHealth = 7.9,
 				spawnFrequency = 0.5,
